@@ -5,14 +5,10 @@
     <vue-grid>
       <vue-grid-row>
         <vue-grid-item class="vueGridItem">
-          <img src="logo.png" alt="vuesion" />
-          <vue-headline level="1">vuesion</vue-headline>
+          <img src="logo-banca.png" alt="vuesion" />
+          <vue-headline level="2">BANCANNABIS</vue-headline>
           <div :class="$style.subTitle">
-            {{
-              $t(
-                'App.core.description' /* The most complete boilerplate for production-ready PWAs. With focus on performance, development speed, and best practices */,
-              )
-            }}
+            {{ $t('App.core.description') }}
           </div>
 
           <br />
@@ -131,10 +127,12 @@ export default {
   background: $brand-bg-color;
   transition: $button-transition;
   transition-property: box-shadow, background-color;
-  color: $brand-link-color;
+  color: #64b15e;
+  border-radius: 50%;
 
   &:hover {
     box-shadow: $button-active-shadow;
+    color: #54057b;
   }
 
   i {

@@ -5,8 +5,14 @@
     <vue-navigation-progress :is-navigating="isNavigating" />
 
     <vue-nav-bar>
-      <vue-button slot="right" v-if="isAuthenticated === false" color="primary" @click="showLoginModal = true">
-        Login
+      <vue-button
+        slot="right"
+        v-if="isAuthenticated === false"
+        style="background:#64b15e;"
+        color="purple"
+        @click="showLoginModal = true"
+      >
+        {{ $t('auth.LoginForm.cta') }}
       </vue-button>
 
       <vue-button slot="right" v-if="isAuthenticated" color="primary" @click="onLogout">
@@ -164,6 +170,7 @@ export default {
       isNavigating: false,
       languages: [
         { label: 'English', value: 'en' },
+        { label: 'Español', value: 'es' },
         { label: 'Deutsch', value: 'de' },
         { label: 'Português', value: 'pt' },
         { label: '中文', value: 'zh-cn' },

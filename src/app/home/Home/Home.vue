@@ -114,12 +114,11 @@ import VueHeadline from '@components/VueHeadline/VueHeadline.vue';
 
 export default {
   metaInfo: {
-    title: 'vuesion - flexible, scalable, opinionated, fast',
+    title: 'Bancannabis',
     meta: [
       {
         name: 'description',
-        content:
-          'vuesion - The most complete boilerplate for production-ready PWAs. With focus on performance, development speed, and best practices',
+        content: 'App.core.description',
       },
       {
         name: 'robots',
@@ -144,7 +143,7 @@ export default {
         content:
           'vuesion - The most complete boilerplate for production-ready PWAs. With focus on performance, development speed, and best practices',
       },
-      { name: 'og:image:url', content: 'https://vuesion.herokuapp.com/logo.png' },
+      { name: 'og:image:url', content: 'logo-banca.png' },
 
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: '@vuesion1' },

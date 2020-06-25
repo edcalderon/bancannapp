@@ -1,10 +1,10 @@
 {
-  "name": "vuesion",
-  "version": "3.7.2",
-  "description": "The most complete boilerplate for production-ready PWAs. With focus on performance, development speed, and best practices",
+  "name": "bancannabis",
+  "version": "1.0.0",
+  "description": "The most complete advanced supply chain in canabis markets",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vuesion/vuesion.git"
+    "url": "https://github.com/"
   },
   "keywords": [
     "vue",

@@ -45,6 +45,13 @@ $button-variations: (
     'hover-color': foreground-color(darken($brand-success, 5%)),
     'border': $button-outlined-border-width solid $brand-success,
   ),
+  'purple': (
+    'bg': #500277,
+    'color': foreground-color(#500277),
+    'hover-bg': darken(#500277, 5%),
+    'hover-color': foreground-color(darken(#500277, 5%)),
+    'border': $button-outlined-border-width solid #500277,
+  ),
   'warning': (
     'bg': $brand-warning,
     'color': foreground-color($brand-warning),
