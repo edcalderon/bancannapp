@@ -2,6 +2,7 @@
   <div>
     <stage :disable-particles="disableParticles" />
     <home-section
+      ref="home-section"
       image="https://images.unsplash.com/photo-1549082984-1323b94df9a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=512&q=60"
       alternative
     >
@@ -175,3 +176,33 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" module>
+@import '~@/app/shared/design-system';
+
+.home-section {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(15, 15, 15, 0.4);
+  padding-top: $space-84;
+
+  image {
+    max-width: 12.8rem;
+    border-radius: 50%;
+  }
+
+  h1 {
+    margin-bottom: $space-32;
+    font-weight: $font-weight-light;
+  }
+
+  @include mediaMin(tabletPortrait) {
+    min-height: 50vh;
+    img {
+      max-width: 25.6rem;
+    }
+  }
+}
+</style>

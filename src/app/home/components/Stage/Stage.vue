@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.stage" ref="stage">
-    <canvas :class="$style.canvas" ref="canvas"></canvas>
+    <div :class="$style.canvas" ref="canvas" id="particles-js"></div>
 
     <vue-grid>
       <vue-grid-row>
@@ -25,11 +25,14 @@
         </vue-grid-item>
       </vue-grid-row>
     </vue-grid>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="particles.js"></script>
   </div>
 </template>
 
 <script lang="ts">
 import { CircleAnimation } from '../../../shared/animations/CircleAnimation';
+import { ParticleAnimation } from '../../../shared/animations/ParticlesAnimation';
 import VueGrid from '@components/VueGrid/VueGrid.vue';
 import VueGridRow from '@components/VueGridRow/VueGridRow.vue';
 import VueGridItem from '@components/VueGridItem/VueGridItem.vue';
@@ -71,7 +74,7 @@ export default {
     this.handleResize();
 
     if (!this.disableParticles) {
-      CircleAnimation(this.$refs.canvas);
+      /*  CircleAnimation(this.$refs.canvas); */
     }
   },
   beforeDestroy() {

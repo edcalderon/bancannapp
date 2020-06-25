@@ -3,21 +3,21 @@
     <vue-grid>
       <vue-grid-row>
         <vue-grid-item>
-          <small>&copy; Copyright {{ year }} Johannes Werner</small>
+          <small>&copy; Copyright {{ year }} Bancannabis.co</small>
         </vue-grid-item>
 
         <vue-grid-item>
-          <a href="https://github.com/devCrossNet" target="_blank" rel="noopener" aria-label="github profile">
+          <a href="https://github.com/" target="_blank" rel="noopener" aria-label="github profile">
             <vue-icon-github-alt />
           </a>
-          <a href="https://twitter.com/vuesion1" target="_blank" rel="noopener" aria-label="twitter profile">
+          <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="twitter profile">
             <vue-icon-twitter-square />
           </a>
         </vue-grid-item>
 
         <vue-grid-item>
           <small>
-            <a href="https://github.com/vuesion/vuesion/blob/master/LICENSE" target="_blank" rel="noopener">
+            <a href="https://github.com/" target="_blank" rel="noopener">
               MIT License
             </a>
           </small>
@@ -56,7 +56,7 @@ export default {
 
 .vueFooter {
   padding: $footer-padding;
-  background: $footer-bg;
+  background: #500277;
   color: $footer-color;
   text-align: center;
 

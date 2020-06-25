@@ -70,6 +70,8 @@ export default {
   margin: $sidebar-margin;
   overflow-y: scroll;
   transform: translateX(-100%);
+  overflow: hidden;
+
   transition: transform $brand-transition-duration ease-in-out;
   width: $sidebar-width;
   -webkit-overflow-scrolling: touch;
@@ -94,8 +96,11 @@ export default {
   font: inherit;
   color: inherit;
   text-transform: none;
-  border: 0;
+  border: 0px;
+  border-radius: 0;
+  border-color: transparent;
   overflow: visible;
+  outline: 0;
   background: $sidebar-hamburger-bg;
 
   .box {
@@ -103,6 +108,7 @@ export default {
     height: $space-32;
     display: inline-block;
     position: relative;
+    outline: 0;
   }
 
   .inner {
@@ -116,7 +122,11 @@ export default {
       width: $space-32;
       height: $space-4 * 0.5;
       background: $sidebar-hamburger-color;
+      color: #64b15e;
+      background: #64b15e;
+      border: 0px solid;
       border-radius: 0;
+      border-color: transparent;
       position: absolute;
       transition-property: transform;
       transition-duration: 0.15s;
@@ -161,6 +171,8 @@ export default {
       &::before,
       &::after {
         background: $sidebar-hamburger-open-color;
+        color: #64b15e;
+        background: #64b15e;
       }
 
       &::before {
@@ -173,6 +185,8 @@ export default {
         bottom: 0;
         transform: rotate(-90deg);
         transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+        color: #64b15e;
+        background: #64b15e;
       }
     }
   }
