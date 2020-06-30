@@ -1,30 +1,33 @@
 <template>
   <div>
     <stage :disable-particles="disableParticles" />
-    <home-section
-      ref="home-section"
-      image="https://images.unsplash.com/photo-1549082984-1323b94df9a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=512&q=60"
-      alternative
-    >
-      <vue-headline level="2">Developer Experience</vue-headline>
-      <br />
-      <vue-headline level="3">Quick scaffolding</vue-headline>
-      <p>Create components, VueX connected components, modules - and their tests - right from the CLI!</p>
-      <br />
-      <vue-headline level="3">Instant feedback</vue-headline>
-      <p>
-        Enjoy the best DX (Developer eXperience) and code your app at the speed of thought! Your saved changes to the
-        CSS and TypeScript are reflected instantaneously without refreshing the page or restarting your server. Preserve
-        application state even when you update something in the underlying code!
-      </p>
-      <br />
-      <vue-headline level="3">Tons of use-cases</vue-headline>
-      <p>
-        e.g. HttpService with interceptors, vuex persist middleware, redirect scenarios, configs for different
-        environments, etc.
-      </p>
-    </home-section>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <home-section ref="home-section" image="">
+      <div class="item" data-aos="fade-right">
+        <vue-headline level="2"> {{ $t('components.home.tittle') }}</vue-headline>
+      </div>
 
+      <br />
+      <div class="item" data-aos="fade-left">
+        <vue-headline level="3">{{ $t('components.home.headline-1') }}</vue-headline>
+        <p>{{ $t('components.home.p-1') }}</p>
+        <br />
+        <vue-headline level="3">{{ $t('components.home.headline-2') }} </vue-headline>
+        <p>
+          {{ $t('components.home.p-2') }}
+        </p>
+        <br />
+        <vue-headline level="3">{{ $t('components.home.headline-3') }} </vue-headline>
+        <p>
+          {{ $t('components.home.p-3') }}
+        </p>
+      </div>
+    </home-section>
+    <!-- 
     <home-section
       image="https://images.unsplash.com/photo-1521790361543-f645cf042ec4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=512&q=60"
       flip
@@ -48,61 +51,7 @@
         Scalable apps need to support multiple languages, easily add and support multiple languages with vue-i18n.
       </p>
     </home-section>
-
-    <home-section
-      image="https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=512&q=60"
-      alternative
-    >
-      <vue-headline level="2">User experience</vue-headline>
-      <br />
-      <vue-headline level="3">Animations</vue-headline>
-      <p>
-        A stable animations set up already included (<a href="http://animejs.com/" target="_blank" rel="noopener"
-          >anime.js</a
-        >).
-      </p>
-      <br />
-      <vue-headline level="3">Progressive-Web-App</vue-headline>
-      <p>
-        Offline-first support with service-workers and a lighthouse score as high as possible (90+).
-      </p>
-      <br />
-      <vue-headline level="3">Design System</vue-headline>
-      <p>
-        Includes a blueprint for a 100% customizable Design System with a huge amount of
-        <a href="/storybook" target="_blank" rel="noopener">components</a>.
-      </p>
-    </home-section>
-
-    <home-section
-      image="https://images.unsplash.com/photo-1516381548400-349d680edb56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=512&q=60"
-      flip
-    >
-      <vue-headline level="2">Quick start</vue-headline>
-      <br />
-      <vue-headline level="3">Via <code>npx</code></vue-headline>
-      <br />
-      <ol>
-        <li>
-          Run <code>npx @vuesion/create [project-name]</code><br />
-          for example <code>npx @vuesion/create my-app</code>
-        </li>
-        <li>Change directory <code>cd my-app</code></li>
-        <li>Run <code>npm run dev</code></li>
-      </ol>
-      <br />
-      <br />
-      <vue-headline level="3">Via Git</vue-headline>
-      <br />
-      <ol>
-        <li>
-          Download or clone (<code>git clone https://github.com/<br />vuesion/vuesion</code>) the repository
-        </li>
-        <li>Change directory <code>cd vuesion</code></li>
-        <li>Install dependencies: <code>npm install</code></li>
-        <li>Run <code>npm run dev</code></li>
-      </ol>
-    </home-section>
+ -->
   </div>
 </template>
 
