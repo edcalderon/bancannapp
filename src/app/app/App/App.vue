@@ -3,7 +3,6 @@
     <vue-notification-stack />
 
     <vue-navigation-progress :is-navigating="isNavigating" />
-
     <vue-nav-bar>
       <vue-button
         slot="right"
@@ -121,6 +120,7 @@ import VueButton from '@components/VueButton/VueButton.vue';
 import VueModal from '@components/VueModal/VueModal.vue';
 import LoginForm from '@shared/modules/auth/LoginForm/LoginForm.vue';
 import { addNotification } from '@components/VueNotificationStack/utils';
+import Vue from 'vue';
 
 export default {
   name: 'App',
