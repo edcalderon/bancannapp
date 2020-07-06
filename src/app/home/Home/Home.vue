@@ -1,11 +1,13 @@
 <template>
   <div>
     <stage :disable-particles="disableParticles" />
+    <!-- animations imports -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
+    <!-- END animations imports -->
     <home-section ref="home-section" image="">
       <div class="item" data-aos="fade-right">
         <vue-headline level="2"> {{ $t('components.home.tittle') }}</vue-headline>
@@ -76,39 +78,35 @@ export default {
       },
       {
         name: 'keywords',
-        content: 'vue.js, vuex, vuex-persist, seo, server-side-rendering, isomorphic, progressive-web-app',
+        content: 'cannabis, blockchain, invest in cannabis',
       },
 
-      { name: 'og:url', content: 'https://vuesion.herokuapp.com/' },
-      { name: 'og:site_name', content: 'vuesion' },
+      { name: 'og:url', content: 'https://bancannabis.herokuapp.com/' },
+      { name: 'og:site_name', content: 'bancannabis.co' },
       { name: 'og:type', content: 'website' },
       { name: 'og:locale', content: 'en' },
       {
         name: 'og:title',
-        content:
-          'vuesion - The most complete boilerplate for production-ready PWAs. With focus on performance, development speed, and best practices',
+        content: 'bancannabis',
       },
       {
         name: 'og:description',
-        content:
-          'vuesion - The most complete boilerplate for production-ready PWAs. With focus on performance, development speed, and best practices',
+        content: 'bancannabis',
       },
-      { name: 'og:image:url', content: 'logo-banca.png' },
+      { name: 'og:image:url', content: '/bancannapp.png' },
 
       { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:site', content: '@vuesion1' },
-      { name: 'twitter:creator', content: '@vuesion1' },
+      { name: 'twitter:site', content: '@bancannabis.co' },
+      { name: 'twitter:creator', content: '@bancannabis.co' },
       {
         name: 'twitter:title',
-        content:
-          'vuesion - The most complete boilerplate for production-ready PWAs. With focus on performance, development speed, and best practices',
+        content: 'bancannabis',
       },
-      { name: 'twitter:url', content: 'https://vuesion.herokuapp.com/' },
-      { name: 'twitter:image', content: 'https://vuesion.herokuapp.com/logo.png' },
+      { name: 'twitter:url', content: 'https://bancannabis.herokuapp.com/' },
+      { name: 'twitter:image', content: 'https://bancannabis.herokuapp.com/logo.png' },
       {
         name: 'twitter:description',
-        content:
-          'vuesion - The most complete boilerplate for production-ready PWAs. With focus on performance, development speed, and best practices',
+        content: 'bancannabis',
       },
     ],
   },

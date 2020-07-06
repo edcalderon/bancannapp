@@ -1,7 +1,7 @@
 {
   "name": "bancannabis",
   "version": "1.0.0",
-  "description": "The most complete advanced supply chain in canabis markets",
+  "description": "The most complete advanced supply chain in cannabis markets",
   "repository": {
     "type": "git",
     "url": "https://github.com/"
@@ -19,11 +19,11 @@
     "components",
     "design-system"
   ],
-  "author": "Johannes Werner <johannes.werner86@gmail.com>",
+  "author": "bancannabis.co",
   "license": "MIT",
-  "homepage": "https://github.com/vuesion/vuesion",
+  "homepage": "https://github.com/",
   "bugs": {
-    "url": "https://github.com/vuesion/vuesion/issues"
+    "url": "https://github.com/"
   },
   "scripts": {
     "dev": "vuesion dev -o",
