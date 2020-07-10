@@ -6,7 +6,7 @@
       <vue-grid-row>
         <vue-grid-item class="vueGridItem">
           <img src="logo-banca.png" alt="vuesion" />
-          <vue-headline level="2">BANCANNABIS</vue-headline>
+          <vue-headline level="2">BANCANNABIS.ORG</vue-headline>
           <div :class="$style.subTitle">
             {{ $t('App.core.description') }}
           </div>
