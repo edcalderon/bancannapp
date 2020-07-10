@@ -1,19 +1,18 @@
 <template>
   <div :class="$style.dashboard">
     <vue-grid>
-      <vue-breadcrumb :items="[{ label: 'Home', href: '/' }, { label: 'VueX Example' }]" />
+      <vue-breadcrumb :items="[{ label: 'Home', href: '/' }, { label: 'Dashboard' }]" />
       <vue-grid-row>
         <vue-grid-item fill>
-          <vue-headline level="1">Dashboard</vue-headline>
-          This demo demonstrates the authentication and re-authentication flow.
+          <vue-headline level="1">BIENVENIDO</vue-headline>
+          En desarrollo
           <br />
-          <strong>Make sure to open the console to see the whole flow.</strong>
           <br />
           <br />
         </vue-grid-item>
 
         <vue-grid-item>
-          Press this&nbsp;&nbsp;&nbsp;&nbsp;<vue-button outlined @click="onClick">button</vue-button>
+          <!--  Press this&nbsp;&nbsp;&nbsp;&nbsp;<vue-button outlined @click="onClick">button</vue-button>
           and the following will happen:
 
           <br />
@@ -35,7 +34,7 @@
                 </li>
               </ul>
             </li>
-          </ul>
+          </ul> -->
         </vue-grid-item>
       </vue-grid-row>
     </vue-grid>

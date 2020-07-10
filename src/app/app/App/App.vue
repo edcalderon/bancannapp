@@ -65,7 +65,7 @@
         </vue-sidebar-group-item> -->
 
         <vue-sidebar-group-item>
-          <a href="/storybook/">
+          <a href="#">
             <vue-icon-puzzle-piece />
             Documentation
           </a>

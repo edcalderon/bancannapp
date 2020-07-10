@@ -8,11 +8,10 @@
       AOS.init();
     </script>
     <!-- END animations imports -->
-    <home-section ref="home-section" image="">
+    <home-section ref="home-section" video="https://www.youtube.com/embed/dcfVI32ik2I">
       <div class="item" data-aos="fade-right">
         <vue-headline level="2"> {{ $t('components.home.tittle') }}</vue-headline>
       </div>
-
       <br />
       <div class="item" data-aos="fade-left">
         <vue-headline level="3">{{ $t('components.home.headline-1') }}</vue-headline>
@@ -29,11 +28,14 @@
         </p>
       </div>
     </home-section>
-    <!-- 
-    <home-section
-      image="https://images.unsplash.com/photo-1521790361543-f645cf042ec4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=512&q=60"
-      flip
-    >
+
+    <vue-card>
+      <p style="text-align: center;">
+        Estamos en la preventa privada de nuestro Token <strong>BCA</strong> ingresa a
+        <a href="https://bancannabis.co" target="_black;">bancannabis.co </a> y adquiere tu participación
+      </p>
+    </vue-card>
+    <!--     <home-section-ieo>
       <vue-headline level="2">Enterprise ready</vue-headline>
       <br />
       <vue-headline level="3">SEO</vue-headline>
@@ -52,8 +54,7 @@
       <p>
         Scalable apps need to support multiple languages, easily add and support multiple languages with vue-i18n.
       </p>
-    </home-section>
- -->
+    </home-section-ieo> -->
   </div>
 </template>
 
@@ -61,6 +62,8 @@
 import { mapState } from 'vuex';
 import Stage from '../components/Stage/Stage.vue';
 import HomeSection from '@/app/home/components/HomeSection/HomeSection.vue';
+import HomeSectionIeo from '@/app/home/components/HomeSection/HomeSectionIeo.vue';
+import VueCard from '@components/VueCard/VueCard.vue';
 import { IState } from '@/app/state';
 import VueHeadline from '@components/VueHeadline/VueHeadline.vue';
 
@@ -113,6 +116,7 @@ export default {
   components: {
     VueHeadline,
     HomeSection,
+    VueCard,
     Stage,
   },
   computed: {

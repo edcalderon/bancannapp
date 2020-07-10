@@ -2,10 +2,6 @@
   <div :class="[$style.homeSection, alternative ? $style.alternative : null]">
     <vue-grid>
       <vue-grid-row :class="[flip ? $style.flip : null]">
-        <vue-grid-item>
-          <vue-image v-if="image" :src="image" :native="false" :class="$style.image"></vue-image>
-          <vue-video v-if="video" :src="video" :native="false" :class="$style.video"></vue-video>
-        </vue-grid-item>
         <vue-grid-item :class="$style.text"><slot /> </vue-grid-item>
       </vue-grid-row>
     </vue-grid>
@@ -61,6 +57,9 @@ export default {
     flex-direction: row-reverse;
   }
 }
+.text {
+  padding-left: 10px;
+}
 
 .image {
   min-height: 400px;
@@ -85,10 +84,6 @@ export default {
   @include mediaMin(tabletPortrait) {
     min-height: 512px;
     margin-bottom: 0;
-  }
-  iframe {
-    border: 5;
-    height: 400px;
   }
 }
 </style>

@@ -116,6 +116,7 @@ export default {
   box-shadow: $modal-shadow;
   padding: $modal-padding;
   overflow-y: scroll;
+  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 
   @include mediaMin(tabletPortrait) {
