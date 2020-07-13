@@ -32,7 +32,7 @@
     <vue-card>
       <p style="text-align: center;">
         Estamos en la preventa privada de nuestro Token <strong>BCA</strong> ingresa a
-        <a href="https://bancannabis.co" target="_black;">bancannabis.co </a> y adquiere tu participación
+        <a href="https://bancannabis.co" target="_black;">bancannabis.co </a> y adquiere tu participación, ahora.
       </p>
     </vue-card>
     <!--     <home-section-ieo>
