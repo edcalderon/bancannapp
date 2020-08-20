@@ -8,7 +8,7 @@
       AOS.init();
     </script>
     <!-- END animations imports -->
-    <home-section ref="home-section" video="https://www.youtube.com/embed/dcfVI32ik2I">
+    <home-section ref="home-section" video="https://www.youtube.com/embed/D4TpWJXlQtM">
       <div class="item" data-aos="fade-right">
         <vue-headline level="2"> {{ $t('components.home.tittle') }}</vue-headline>
       </div>
