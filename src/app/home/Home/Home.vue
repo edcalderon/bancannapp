@@ -8,7 +8,7 @@
       AOS.init();
     </script>
     <!-- END animations imports -->
-    <home-section ref="home-section" video="https://www.youtube.com/embed/D4TpWJXlQtM">
+    <home-section ref="home-section" :video="{ setVideo }">
       <div class="item" data-aos="fade-right">
         <vue-headline level="2"> {{ $t('components.home.tittle') }}</vue-headline>
       </div>
@@ -64,7 +64,7 @@ import Stage from '../components/Stage/Stage.vue';
 import HomeSection from '@/app/home/components/HomeSection/HomeSection.vue';
 import HomeSectionIeo from '@/app/home/components/HomeSection/HomeSectionIeo.vue';
 import VueCard from '@components/VueCard/VueCard.vue';
-import { IState } from '@/app/state';
+import { IState, IAppState } from '@/app/state';
 import VueHeadline from '@components/VueHeadline/VueHeadline.vue';
 
 export default {
@@ -123,6 +123,15 @@ export default {
     ...mapState({
       disableParticles: (state: IState) =>
         (state.app.config && state.app.config.features && state.app.config.features.disableParticles) || false,
+    }),
+    ...mapState({
+      setVideo: (state: IState) => {
+        if (state.app.locale == 'es') {
+          return 'https://www.youtube.com/embed/cCjwIKJhsnY';
+        } else {
+          return 'https://www.youtube.com/embed/D4TpWJXlQtM';
+        }
+      },
     }),
   },
 };

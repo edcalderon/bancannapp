@@ -4,7 +4,7 @@
       <vue-grid-row :class="[flip ? $style.flip : null]">
         <vue-grid-item>
           <vue-image v-if="image" :src="image" :native="false" :class="$style.image"></vue-image>
-          <vue-video v-if="video" :src="video" :native="false" :class="$style.video"></vue-video>
+          <vue-video v-if="video" :src="video.setVideo" :native="false" :class="$style.video"></vue-video>
         </vue-grid-item>
         <vue-grid-item :class="$style.text"><slot /> </vue-grid-item>
       </vue-grid-row>

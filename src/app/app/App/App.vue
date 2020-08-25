@@ -152,9 +152,9 @@ export default {
       languages: [
         { label: 'English', value: 'en' },
         { label: 'Español', value: 'es' },
-        { label: 'Deutsch', value: 'de' },
+        /*         { label: 'Deutsch', value: 'de' },
         { label: 'Português', value: 'pt' },
-        { label: '中文', value: 'zh-cn' },
+        { label: '中文', value: 'zh-cn' }, */
       ],
       showLoginModal: false,
       isLoginPending: false,
