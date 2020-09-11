@@ -9,14 +9,14 @@ const particlesJSON = {
     },
     color: {
       //The color for every node, not the connecting lines.
-      value: '#79bc74', //Or use an array of colors like ["#9b0000", "#001378", "#0b521f"]
+      value: '#9f0fca', //Or use an array of colors like ["#9b0000", "#001378", "#0b521f"]
     },
     shape: {
       type: 'circle', // Can show circle, edge (a square), triangle, polygon, star, img, or an array of multiple.
       stroke: {
         //The border
         width: 1,
-        color: '#79bc74',
+        color: '#9f0fca',
       },
       polygon: {
         //if the shape is a polygon
@@ -65,11 +65,11 @@ const particlesJSON = {
     detect_on: 'canvas',
     events: {
       onhover: {
-        enable: false,
+        enable: true,
         mode: 'repulse',
       },
       onclick: {
-        enable: false,
+        enable: true,
         mode: 'push',
       },
       resize: true,
@@ -89,8 +89,8 @@ const particlesJSON = {
         speed: 3,
       },
       repulse: {
-        distance: 400,
-        duration: 0.4,
+        distance: 250,
+        duration: 0.2,
       },
       push: {
         particles_nb: 4,

@@ -35,7 +35,7 @@ class Circle {
 
     this.context.closePath();
 
-    this.context.fillStyle = 'rgba(31, 143, 24,' + this.opacity + ')';
+    this.context.fillStyle = 'rgba(81, 2, 120,' + this.opacity + ')';
     this.context.fill();
 
     if (this.opacity <= 0) {

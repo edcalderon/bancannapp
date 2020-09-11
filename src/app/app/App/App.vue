@@ -5,6 +5,7 @@
     <vue-navigation-progress :is-navigating="isNavigating" />
     <vue-nav-bar>
       <vue-button
+        disabled="true"
         slot="right"
         v-if="isAuthenticated === false"
         style="background:#64b15e;"

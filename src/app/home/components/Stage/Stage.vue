@@ -1,12 +1,11 @@
 <template>
   <div :class="$style.stage" ref="stage">
     <div :class="$style.canvas" ref="canvas" id="particles-js"></div>
-
     <vue-grid>
       <vue-grid-row>
         <vue-grid-item class="vueGridItem">
-          <img src="logo-banca.png" alt="vuesion" />
-          <vue-headline level="2">BANCANNABIS.ORG</vue-headline>
+          <img src="logo-banca.png" alt="bancannabis" />
+          <vue-headline appearance-level="1" level="2">BANCANNABIS.ORG</vue-headline>
           <div :class="$style.subTitle">
             {{ $t('App.core.description') }}
           </div>
@@ -32,7 +31,7 @@
 
 <script lang="ts">
 import { CircleAnimation } from '../../../shared/animations/CircleAnimation';
-import { ParticleAnimation } from '../../../shared/animations/ParticlesAnimation';
+import ParticleAnimation  from '../../../shared/animations/ParticlesAnimation';
 import VueGrid from '@components/VueGrid/VueGrid.vue';
 import VueGridRow from '@components/VueGridRow/VueGridRow.vue';
 import VueGridItem from '@components/VueGridItem/VueGridItem.vue';
@@ -118,6 +117,7 @@ export default {
   background-color: transparent;
   left: 0;
   top: 0;
+  z-index: 2;
 
   @include mediaMin(tabletPortrait) {
     min-height: 50vh;

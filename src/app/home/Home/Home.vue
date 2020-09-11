@@ -8,29 +8,29 @@
       AOS.init();
     </script>
     <!-- END animations imports -->
-    <home-section ref="home-section" :video="{ setVideo }">
+    <home-section flip ref="home-section" :video="{ setVideo }">
       <div class="item" data-aos="fade-right">
-        <vue-headline level="2"> {{ $t('components.home.tittle') }}</vue-headline>
+        <vue-headline appearance-level="2" level="2"> {{ $t('components.home.tittle') }}</vue-headline>
       </div>
       <br />
       <div class="item" data-aos="fade-left">
-        <vue-headline level="3">{{ $t('components.home.headline-1') }}</vue-headline>
+        <vue-headline appearance-level="3" level="3">{{ $t('components.home.headline-1') }}</vue-headline>
         <p>{{ $t('components.home.p-1') }}</p>
         <br />
-        <vue-headline level="3">{{ $t('components.home.headline-2') }} </vue-headline>
+        <vue-headline appearance-level="3" level="3">{{ $t('components.home.headline-2') }} </vue-headline>
         <p>
           {{ $t('components.home.p-2') }}
         </p>
         <br />
-        <vue-headline level="3">{{ $t('components.home.headline-3') }} </vue-headline>
+        <vue-headline appearance-level="3" level="3">{{ $t('components.home.headline-3') }} </vue-headline>
         <p>
           {{ $t('components.home.p-3') }}
         </p>
       </div>
     </home-section>
 
-    <vue-card>
-      <p style="text-align: center;">
+    <vue-card style="background-color:#ffffff;">
+      <p class="first-text" style="text-align: center;">
         Estamos en la preventa privada de nuestro Token <strong>BCA</strong> ingresa a
         <a href="https://bancannabis.co" target="_black;">bancannabis.co </a> y adquiere tu participación, ahora.
       </p>
@@ -165,4 +165,6 @@ export default {
     }
   }
 }
+
+
 </style>

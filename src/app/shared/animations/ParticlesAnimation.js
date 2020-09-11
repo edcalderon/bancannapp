@@ -16,13 +16,13 @@ json = {
       },
     },
     color: {
-      value: '#ffffff',
+      value: '#7583be',
     },
     shape: {
       type: 'circle',
       stroke: {
         width: 0,
-        color: '#000000',
+        color: '#7583be',
       },
       polygon: {
         nb_sides: 5,
@@ -37,7 +37,7 @@ json = {
       value: 0.5,
       random: false,
       anim: {
-        enable: false,
+        enable: true,
         speed: 1,
         opacity_min: 0.1,
         sync: false,
@@ -56,7 +56,7 @@ json = {
     line_linked: {
       enable: true,
       distance: 300,
-      color: '#ffffff',
+      color: '#7583be',
       opacity: 0.4,
       width: 2,
     },
@@ -79,7 +79,7 @@ json = {
     detect_on: 'canvas',
     events: {
       onhover: {
-        enable: false,
+        enable: true,
         mode: 'repulse',
       },
       onclick: {

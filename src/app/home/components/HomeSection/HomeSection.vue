@@ -33,6 +33,7 @@ export default {
     },
     alternative: {
       type: Boolean,
+      required: false,
     },
     flip: {
       type: Boolean,
