@@ -28,13 +28,16 @@
         </p>
       </div>
     </home-section>
+    <div class="tcontainer">
+      <div class="ticker-wrap">
+        <div class="ticker-move">
+          <div class="ticker-item">{{ $t('components.home.ticker-1') }} <strong>BCA</strong></div>
+          <div class="ticker-item"><a href="https://bancannabis.co" target="_black;">bancannabis.co</a></div>
+          <div class="ticker-item"></div>
+        </div>
+      </div>
+    </div>
 
-    <vue-card style="background-color:#ffffff;">
-      <p class="first-text" style="text-align: center;">
-        Estamos en la preventa privada de nuestro Token <strong>BCA</strong> ingresa a
-        <a href="https://bancannabis.co" target="_black;">bancannabis.co </a> y adquiere tu participación, ahora.
-      </p>
-    </vue-card>
     <!--     <home-section-ieo>
       <vue-headline level="2">Enterprise ready</vue-headline>
       <br />
@@ -62,9 +65,8 @@
 import { mapState } from 'vuex';
 import Stage from '../components/Stage/Stage.vue';
 import HomeSection from '@/app/home/components/HomeSection/HomeSection.vue';
-import HomeSectionIeo from '@/app/home/components/HomeSection/HomeSectionIeo.vue';
 import VueCard from '@components/VueCard/VueCard.vue';
-import { IState, IAppState } from '@/app/state';
+import { IState } from '@/app/state';
 import VueHeadline from '@components/VueHeadline/VueHeadline.vue';
 
 export default {
@@ -84,10 +86,10 @@ export default {
         content: 'cannabis, blockchain, invest in cannabis',
       },
 
-      { name: 'og:url', content: 'https://bancannabis.herokuapp.com/' },
+      { name: 'og:url', content: 'https://bancannabis.org' },
       { name: 'og:site_name', content: 'bancannabis.co' },
       { name: 'og:type', content: 'website' },
-      { name: 'og:locale', content: 'en' },
+      { name: 'og:locale', content: 'es' },
       {
         name: 'og:title',
         content: 'bancannabis',
@@ -99,14 +101,14 @@ export default {
       { name: 'og:image:url', content: '/bancannapp.png' },
 
       { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:site', content: '@bancannabis.co' },
-      { name: 'twitter:creator', content: '@bancannabis.co' },
+      { name: 'twitter:site', content: '@bancannabis' },
+      { name: 'twitter:creator', content: '@bancannabis' },
       {
         name: 'twitter:title',
         content: 'bancannabis',
       },
-      { name: 'twitter:url', content: 'https://bancannabis.herokuapp.com/' },
-      { name: 'twitter:image', content: 'https://bancannabis.herokuapp.com/logo.png' },
+      { name: 'twitter:url', content: 'https://twitter.com/bancannabis' },
+      { name: 'twitter:image', content: 'https://twitter.com/bancannabis' },
       {
         name: 'twitter:description',
         content: 'bancannabis',
@@ -137,8 +139,8 @@ export default {
 };
 </script>
 
-<style lang="scss" module>
-@import '~@/app/shared/design-system';
+<style lang="css" module>
+/* @import '~@/app/shared/design-system';
 
 .home-section {
   min-height: 100vh;
@@ -164,7 +166,43 @@ export default {
       max-width: 25.6rem;
     }
   }
+} */
+/* OUTER CONTAINER */
+
+.tcontainer {
+  width: 100%;
+  overflow-x: hidden; /* Hide scroll bar */
 }
 
+/* MIDDLE CONTAINER */
+.ticker-wrap {
+  width: 100%;
+  padding-left: 60%; /* Push contents to right side of screen */
+  background-color: #eee;
+}
 
+/* INNER CONTAINER */
+@keyframes ticker {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+.ticker-move {
+  /* Basically move items from right side of screen to left in infinite loop */
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 10%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 20s;
+}
+.ticker-move:hover{
+  animation-play-state: paused; /* Pause scroll on mouse hover */
+}
+
+/* ITEMS */
+.ticker-item{
+  display: inline-block; /* Lay items in a horizontal line */
+  padding: 0 2rem;
+}
 </style>

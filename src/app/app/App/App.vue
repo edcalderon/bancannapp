@@ -50,11 +50,7 @@
           <vue-icon-hashtag />
           VueX Example
         </vue-sidebar-group-item>
-
-        <vue-sidebar-group-item :to="{ name: 'form' }">
-          <vue-icon-hashtag />
-          Form Example
-        </vue-sidebar-group-item> -->
+        -->
       </vue-sidebar-group>
 
       <vue-sidebar-group title="Documentation">
@@ -66,23 +62,23 @@
         </vue-sidebar-group-item> -->
 
         <vue-sidebar-group-item>
-          <a href="#">
+          <a href="/green_paper_bancannabis.pdf" download>
             <vue-icon-puzzle-piece />
-            Documentation
+            Green Paper
           </a>
         </vue-sidebar-group-item>
       </vue-sidebar-group>
 
       <vue-sidebar-group title="Community">
         <vue-sidebar-group-item>
-          <a href="https://github.com/" target="_blank" rel="noopener">
+          <a href="https://github.com/bancannabis" target="_blank" rel="noopener">
             <vue-icon-github />
             Github
           </a>
         </vue-sidebar-group-item>
 
         <vue-sidebar-group-item>
-          <a href="https://twitter.com/" target="_blank" rel="noopener">
+          <a href="https://twitter.com/bancannabis" target="_blank" rel="noopener">
             <vue-icon-twitter-square />
             Twitter
           </a>
@@ -222,6 +218,7 @@ export default {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .content {

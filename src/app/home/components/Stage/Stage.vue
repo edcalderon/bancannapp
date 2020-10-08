@@ -3,7 +3,7 @@
     <div :class="$style.canvas" ref="canvas" id="particles-js"></div>
     <vue-grid>
       <vue-grid-row>
-        <vue-grid-item class="vueGridItem">
+        <vue-grid-item class="vueGridItem" :class="$style.stage">
           <img src="logo-banca.png" alt="bancannabis" />
           <vue-headline appearance-level="1" level="2">BANCANNABIS.ORG</vue-headline>
           <div :class="$style.subTitle">
@@ -31,7 +31,7 @@
 
 <script lang="ts">
 import { CircleAnimation } from '../../../shared/animations/CircleAnimation';
-import ParticleAnimation  from '../../../shared/animations/ParticlesAnimation';
+import ParticleAnimation from '../../../shared/animations/ParticlesAnimation';
 import VueGrid from '@components/VueGrid/VueGrid.vue';
 import VueGridRow from '@components/VueGridRow/VueGridRow.vue';
 import VueGridItem from '@components/VueGridItem/VueGridItem.vue';
@@ -92,7 +92,7 @@ export default {
   text-align: center;
   text-shadow: 0 0 5px rgba(15, 15, 15, 0.4);
   padding-top: $space-84;
-
+  align-content: center;
   img {
     max-width: 12.8rem;
   }
@@ -105,7 +105,15 @@ export default {
   @include mediaMin(tabletPortrait) {
     min-height: 50vh;
     img {
-      max-width: 25.6rem;
+      max-width: 5.6rem;
+      align-content: center;
+    }
+  }
+  @include mediaMin(phone) {
+    min-height: 50vh;
+    text-align: center;
+    img {
+      max-width: 15rem;
     }
   }
 }
