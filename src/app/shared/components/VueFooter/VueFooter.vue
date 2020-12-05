@@ -3,22 +3,13 @@
     <vue-grid>
       <vue-grid-row>
         <vue-grid-item>
-          <small>&copy; Copyright {{ year }} Bancannabis.co</small>
-        </vue-grid-item>
-
-        <vue-grid-item>
-          <a href="https://github.com/" target="_blank" rel="noopener" aria-label="github profile">
-            <vue-icon-github-alt />
-          </a>
-          <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="twitter profile">
-            <vue-icon-twitter-square />
-          </a>
+          <small>&copy; Copyright {{ year }} Bancannabis.org</small>
         </vue-grid-item>
 
         <vue-grid-item>
           <small>
-            <a href="https://github.com/" target="_blank" rel="noopener">
-              MIT License
+            <a href="https://bancannabis.co" target="_blank" rel="noopener noreferrer">
+              <img src="banca.png" alt="bancannabis.co" /> By bancannabis Team
             </a>
           </small>
         </vue-grid-item>
@@ -56,8 +47,9 @@ export default {
 
 .vueFooter {
   padding: $footer-padding;
-  background: #500277;
-  color: $footer-color;
+  /* background:#2a1d58 */
+  background: #ffffff;
+  color: #000000;
   text-align: center;
 
   i {
@@ -71,17 +63,23 @@ export default {
     }
   }
 
+  img {
+    max-width: 5rem;
+    border: none !important;
+  }
+
   small {
     display: inline-block;
     margin: $space-12 0;
   }
 
   a {
-    color: $footer-link-color;
+    /* color: $footer-link-color; */
+    color: #291e59;
     font-weight: $footer-link-font-weight;
 
     &:hover {
-      color: $footer-link-hover-color;
+      color: #9cbe34;
     }
   }
 }

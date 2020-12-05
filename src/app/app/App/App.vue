@@ -5,14 +5,13 @@
     <vue-navigation-progress :is-navigating="isNavigating" />
     <vue-nav-bar>
       <vue-button
-        disabled="true"
         slot="right"
         v-if="isAuthenticated === false"
         style="background:#64b15e;"
         color="purple"
-        @click="showLoginModal = true"
+        @click="redirect()"
       >
-        {{ $t('auth.LoginForm.cta') }}
+        {{ $t('auth.LoginForm.bca') }}
       </vue-button>
 
       <vue-button slot="right" v-if="isAuthenticated" color="primary" @click="onLogout">
@@ -23,15 +22,14 @@
     <router-view :class="$style.content" />
 
     <vue-footer />
-    <!-- 
+
     <vue-cookie-consent
       current-version="1.0.0"
       :cookie-consent-version="cookieConsentVersion"
       :set-cookie-consent-version="setCookieConsentVersion"
     >
-      This is a cookie consent component which shows the cookie consent every time you change the version of the
-      consent.
-    </vue-cookie-consent> -->
+      We use cookies
+    </vue-cookie-consent>
 
     <vue-sidebar>
       <vue-sidebar-group title="Languages">
@@ -45,24 +43,11 @@
           <vue-icon-code />
           Home
         </vue-sidebar-group-item>
-
-        <!--  <vue-sidebar-group-item :to="{ name: 'counter' }">
-          <vue-icon-hashtag />
-          VueX Example
-        </vue-sidebar-group-item>
-        -->
       </vue-sidebar-group>
 
       <vue-sidebar-group title="Documentation">
-        <!--     <vue-sidebar-group-item>
-          <a href="https://github.io/edcalderon/bancannapp/">
-            <vue-icon-book />
-            Documentation
-          </a>
-        </vue-sidebar-group-item> -->
-
         <vue-sidebar-group-item>
-          <a href="/green_paper_bancannabis.pdf" download>
+          <a href="/green_paper_bancannabis.pdf" target="_blank" rel="noopener noreferrer" download>
             <vue-icon-puzzle-piece />
             Green Paper
           </a>
@@ -71,14 +56,14 @@
 
       <vue-sidebar-group title="Community">
         <vue-sidebar-group-item>
-          <a href="https://github.com/bancannabis" target="_blank" rel="noopener">
+          <a href="https://github.com/bancannabis" target="_blank" rel="noopener noreferrer">
             <vue-icon-github />
             Github
           </a>
         </vue-sidebar-group-item>
 
         <vue-sidebar-group-item>
-          <a href="https://twitter.com/bancannabis" target="_blank" rel="noopener">
+          <a href="https://twitter.com/bancannabis" target="_blank" rel="noopener noreferrer">
             <vue-icon-twitter-square />
             Twitter
           </a>
@@ -201,6 +186,9 @@ export default {
 
       this.isLoginPending = false;
       this.showLoginModal = false;
+    },
+    redirect() {
+      window.open('https://bancannabis.co', '_blank');
     },
   },
   created() {

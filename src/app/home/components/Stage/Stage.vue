@@ -4,19 +4,18 @@
     <vue-grid>
       <vue-grid-row>
         <vue-grid-item class="vueGridItem" :class="$style.stage">
-          <img src="logo-banca.png" alt="bancannabis" />
+          <img src="bacannapp.png" alt="bancannabis" />
           <vue-headline appearance-level="1" level="2">BANCANNABIS.ORG</vue-headline>
           <div :class="$style.subTitle">
             {{ $t('App.core.description') }}
           </div>
-
           <br />
 
           <a
             :class="$style.github"
-            href="https://github.com/vuesion/vuesion"
+            rel="noopener noreferrer"
+            href="https://github.com/bancannabis"
             target="_blank"
-            rel="noopener"
             aria-label="vuesion github repository"
           >
             <vue-icon-github />
@@ -97,35 +96,36 @@ export default {
     max-width: 12.8rem;
   }
 
-  h1 {
-    margin-bottom: $space-32;
-    font-weight: $font-weight-light;
-  }
-
   @include mediaMin(tabletPortrait) {
-    min-height: 50vh;
+    max-height: 50vh;
     img {
       max-width: 5.6rem;
+      max-height: 15rem;
       align-content: center;
     }
   }
   @include mediaMin(phone) {
-    min-height: 50vh;
+    max-height: 50vh;
+    max-weight: 50vh;
     text-align: center;
     img {
       max-width: 15rem;
+      max-height: 15rem;
+    }
+    h2 {
+      margin-bottom: $space-32;
+      font-size: $font-size-h2;
     }
   }
 }
 
 .canvas {
-  min-height: 100vh;
   width: 100%;
   position: absolute;
   background-color: transparent;
   left: 0;
   top: 0;
-  z-index: 2;
+  z-index: -1;
 
   @include mediaMin(tabletPortrait) {
     min-height: 50vh;

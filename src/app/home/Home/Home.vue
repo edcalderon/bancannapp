@@ -8,7 +8,7 @@
       AOS.init();
     </script>
     <!-- END animations imports -->
-    <home-section flip ref="home-section" :video="{ setVideo }">
+    <home-section flip ref="home-section" :image="{ setImagen }">
       <div class="item" data-aos="fade-right">
         <vue-headline appearance-level="2" level="2"> {{ $t('components.home.tittle') }}</vue-headline>
       </div>
@@ -28,16 +28,6 @@
         </p>
       </div>
     </home-section>
-    <div class="tcontainer">
-      <div class="ticker-wrap">
-        <div class="ticker-move">
-          <div class="ticker-item">{{ $t('components.home.ticker-1') }} <strong>BCA</strong></div>
-          <div class="ticker-item"><a href="https://bancannabis.co" target="_black;">bancannabis.co</a></div>
-          <div class="ticker-item"></div>
-        </div>
-      </div>
-    </div>
-
     <!--     <home-section-ieo>
       <vue-headline level="2">Enterprise ready</vue-headline>
       <br />
@@ -134,13 +124,20 @@ export default {
           return 'https://www.youtube.com/embed/D4TpWJXlQtM';
         }
       },
+      setImagen: (state: IState) => {
+        if (state.app.locale == 'es') {
+          return '/re-esp.png';
+        } else {
+          return '/re-eng.png';
+        }
+      },
     }),
   },
 };
 </script>
 
-<style lang="css" module>
-/* @import '~@/app/shared/design-system';
+<style lang="scss" module>
+@import '~@/app/shared/design-system';
 
 .home-section {
   min-height: 100vh;
@@ -155,7 +152,7 @@ export default {
     border-radius: 50%;
   }
 
-  h1 {
+  h2 {
     margin-bottom: $space-32;
     font-weight: $font-weight-light;
   }
@@ -166,43 +163,5 @@ export default {
       max-width: 25.6rem;
     }
   }
-} */
-/* OUTER CONTAINER */
-
-.tcontainer {
-  width: 100%;
-  overflow-x: hidden; /* Hide scroll bar */
-}
-
-/* MIDDLE CONTAINER */
-.ticker-wrap {
-  width: 100%;
-  padding-left: 60%; /* Push contents to right side of screen */
-  background-color: #eee;
-}
-
-/* INNER CONTAINER */
-@keyframes ticker {
-  0% { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(-100%, 0, 0); }
-}
-.ticker-move {
-  /* Basically move items from right side of screen to left in infinite loop */
-  display: inline-block;
-  white-space: nowrap;
-  padding-right: 10%;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-name: ticker;
-  animation-duration: 20s;
-}
-.ticker-move:hover{
-  animation-play-state: paused; /* Pause scroll on mouse hover */
-}
-
-/* ITEMS */
-.ticker-item{
-  display: inline-block; /* Lay items in a horizontal line */
-  padding: 0 2rem;
 }
 </style>

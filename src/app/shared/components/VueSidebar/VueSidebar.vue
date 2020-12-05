@@ -122,8 +122,8 @@ export default {
       width: $space-32;
       height: $space-4 * 0.5;
       background: $sidebar-hamburger-color;
-      color: #64b15e;
-      background: #64b15e;
+      color: #9e10c9;
+      background: #9e10c9;
       border: 0px solid;
       border-radius: 0;
       border-color: transparent;

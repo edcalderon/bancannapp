@@ -3,8 +3,10 @@
     <vue-grid>
       <vue-grid-row :class="[flip ? $style.flip : null]">
         <vue-grid-item>
-          <vue-image v-if="image" :src="image" :native="false" :class="$style.image"></vue-image>
-          <vue-video v-if="video" :src="video.setVideo" :native="false" :class="$style.video"></vue-video>
+          <div class="item" data-aos="fade-right">
+            <vue-image v-if="image" :src="image.setImagen" :native="true" :class="$style.image"></vue-image>
+            <vue-video v-if="video" :src="video.setVideo" :native="false" :class="$style.video"></vue-video>
+          </div>
         </vue-grid-item>
         <vue-grid-item :class="$style.text"><slot /> </vue-grid-item>
       </vue-grid-row>
@@ -64,17 +66,25 @@ export default {
 }
 
 .image {
-  min-height: 400px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50%;
+  background-position: 5%;
   margin-bottom: $space-32;
-  border-radius: 5px;
+  border-radius: 10%;
+  border: none !important;
   /*  box-shadow: $button-active-shadow; */
-
   @include mediaMin(tabletPortrait) {
-    min-height: 512px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     margin-bottom: 0;
+    zoom: -20%;
+  }
+  @include mediaMin(phone) {
+    width: 100%;
+    height: 100%;
+    margin-bottom: $space-40;
+    object-fit: contain;
   }
 }
 .video {
@@ -88,7 +98,6 @@ export default {
     margin-bottom: 0;
   }
   iframe {
-    border: 5;
     height: 400px;
   }
 }
