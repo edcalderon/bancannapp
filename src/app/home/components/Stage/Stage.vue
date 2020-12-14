@@ -6,12 +6,12 @@
         <vue-grid-item class="vueGridItem" :class="$style.stage">
           <img src="bacannapp.png" alt="bancannabis" />
           <vue-headline appearance-level="1" level="2">BANCANNABIS.ORG</vue-headline>
-          <div :class="$style.subTitle">
+          <div :class="$style.subTittle">
             {{ $t('App.core.description') }}
+            <div class='console-container'><span id='text'></span><div class='console-underscore hidden' id='console'></div></div>
           </div>
           <br />
-
-          <a
+<!--           <a
             :class="$style.github"
             rel="noopener noreferrer"
             href="https://github.com/bancannabis"
@@ -19,12 +19,13 @@
             aria-label="vuesion github repository"
           >
             <vue-icon-github />
-          </a>
+          </a> -->
         </vue-grid-item>
       </vue-grid-row>
     </vue-grid>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="particles.js"></script>
+    <script src="code.js"></script>
   </div>
 </template>
 
@@ -116,6 +117,32 @@ export default {
       margin-bottom: $space-32;
       font-size: $font-size-h2;
     }
+  }
+}
+
+.subTittle {
+  font-weight: 400;
+
+  .console-container {
+    font-family:Khula;
+    font-size:4em;
+    text-align:center;
+    height:200px;
+    width:600px;
+    display:block;
+    position:absolute;
+    color:white;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+  }
+  .console-underscore {
+    display:inline-block;
+    position:absolute;
+    top:-0.14em;
+    left:10px;
   }
 }
 

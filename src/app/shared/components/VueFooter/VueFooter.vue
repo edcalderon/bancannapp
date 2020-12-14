@@ -8,7 +8,7 @@
 
         <vue-grid-item>
           <small>
-            <a href="https://bancannabis.co" target="_blank" rel="noopener noreferrer">
+            <a href="https://e-groweed.com/" target="_blank" rel="noopener noreferrer">
               <img src="banca.png" alt="bancannabis.co" /> By bancannabis Team
             </a>
           </small>
