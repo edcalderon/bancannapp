@@ -1,11 +1,10 @@
 <template>
   <div :class="$style.form">
     <vue-grid>
-      <vue-breadcrumb :items="[{ label: 'Home', href: '/' }, { label: 'Form Example' }]" />
-
+      <vue-breadcrumb :items="[{ label: 'Home', href: '/' }, { label: 'About BCA' }]" />
       <vue-grid-row>
         <vue-grid-item>
-          <vue-headline level="1">Form example</vue-headline>
+          <vue-headline level="1">About BCA</vue-headline>
           <form-example />
         </vue-grid-item>
       </vue-grid-row>
@@ -23,7 +22,7 @@ import VueBreadcrumb from '@components/VueBreadcrumb/VueBreadcrumb.vue';
 
 export default {
   metaInfo: {
-    title: 'Form',
+    title: 'aboutBCA',
   },
   components: { VueBreadcrumb, VueHeadline, FormExample, VueGridItem, VueGridRow, VueGrid },
   computed: {},

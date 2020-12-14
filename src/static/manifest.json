@@ -1,8 +1,8 @@
 {
-  "name": "Bancannabis.co",
-  "short_name": "Bancannapp",
-  "theme_color": "#f43b6c",
-  "background_color": "#f43b6c",
+  "name": "Bancannabis",
+  "short_name": "BCA",
+  "theme_color": "#9f10ca",
+  "background_color": "#9f10ca",
   "display": "standalone",
   "orientation": "portrait",
   "Scope": "/",
@@ -23,7 +23,7 @@
       "sizes": "128x128",
       "type": "image/png"
     },
-    {
+    {1
       "src": "/bancannapp.png",
       "sizes": "144x144",
       "type": "image/png"

@@ -5,11 +5,12 @@
     <vue-navigation-progress :is-navigating="isNavigating" />
     <vue-nav-bar>
       <vue-button
+        :class="$style.button"
         slot="right"
         v-if="isAuthenticated === false"
-        style="background:#64b15e;"
+        style="background:#efe58a;"
         color="purple"
-        @click="redirect()"
+        @click="redirectToSale()"
       >
         {{ $t('auth.LoginForm.bca') }}
       </vue-button>
@@ -23,14 +24,6 @@
 
     <vue-footer />
 
-    <vue-cookie-consent
-      current-version="1.0.0"
-      :cookie-consent-version="cookieConsentVersion"
-      :set-cookie-consent-version="setCookieConsentVersion"
-    >
-      We use cookies
-    </vue-cookie-consent>
-
     <vue-sidebar>
       <vue-sidebar-group title="Languages">
         <vue-sidebar-group-item>
@@ -43,13 +36,23 @@
           <vue-icon-code />
           Home
         </vue-sidebar-group-item>
+        <vue-sidebar-group-item to="/aboutBCA">
+          <vue-icon-code />
+          {{ $t('about.bca') }}
+        </vue-sidebar-group-item>
       </vue-sidebar-group>
 
-      <vue-sidebar-group title="Documentation">
+      <vue-sidebar-group title="Docs">
         <vue-sidebar-group-item>
-          <a href="/green_paper_bancannabis.pdf" target="_blank" rel="noopener noreferrer" download>
+          <a href="/white_paper_bancannabis_esp.pdf" target="_blank" rel="noopener noreferrer" download>
             <vue-icon-puzzle-piece />
-            Green Paper
+            White Paper Bancannabis Español
+          </a>
+        </vue-sidebar-group-item>
+        <vue-sidebar-group-item>
+          <a href="/white_paper_bancannabis_eng.pdf" target="_blank" rel="noopener noreferrer" download>
+            <vue-icon-puzzle-piece />
+            White Paper Bancannabis English
           </a>
         </vue-sidebar-group-item>
       </vue-sidebar-group>
@@ -131,14 +134,9 @@ export default {
   data(): any {
     return {
       isNavigating: false,
-      languages: [
-        { label: 'English', value: 'en' },
-        { label: 'Español', value: 'es' },
-        /*         { label: 'Deutsch', value: 'de' },
-        { label: 'Português', value: 'pt' },
-        { label: '中文', value: 'zh-cn' }, */
-      ],
+      languages: [{ label: 'English', value: 'en' }, { label: 'Español', value: 'es' }],
       showLoginModal: false,
+      showBCAModal: false,
       isLoginPending: false,
     };
   },
@@ -151,7 +149,6 @@ export default {
     ...mapActions('auth', ['createToken', 'revokeToken']),
     localeSwitch(locale: string) {
       loadLocaleAsync(locale).catch((error: Error) => console.log(error)); // tslint:disable-line
-
       this.changeLocale(locale);
     },
     initProgressBar() {
@@ -187,8 +184,8 @@ export default {
       this.isLoginPending = false;
       this.showLoginModal = false;
     },
-    redirect() {
-      window.open('https://bancannabis.co', '_blank');
+    redirectToSale() {
+      window.open('https://bancannabis.co/sale', '_blank');
     },
   },
   created() {
@@ -209,8 +206,21 @@ export default {
   overflow-x: hidden;
 }
 
+.button {
+  color: #520978 !important;
+  &:hover {
+    background: #9182dd !important;
+    color: #efe58a !important;
+    border-color: #520978 !important;
+  }
+}
+
 .content {
   flex: 1;
+}
+
+.vueModal {
+  border-radius: 15px !important;
 }
 
 .logo {

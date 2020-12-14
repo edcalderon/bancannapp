@@ -52,6 +52,13 @@ $button-variations: (
     'hover-color': foreground-color(darken(#500277, 5%)),
     'border': $button-outlined-border-width solid #500277,
   ),
+  'gold': (
+    'bg': #efe58a,
+    'color': foreground-color(#efe58a),
+    'hover-bg': darken(#500277, 5%),
+    'hover-color': foreground-color(darken(#500277, 5%)),
+    'border': $button-outlined-border-width solid #500277,
+  ),
   'warning': (
     'bg': $brand-warning,
     'color': foreground-color($brand-warning),

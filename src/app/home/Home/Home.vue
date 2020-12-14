@@ -28,26 +28,6 @@
         </p>
       </div>
     </home-section>
-    <!--     <home-section-ieo>
-      <vue-headline level="2">Enterprise ready</vue-headline>
-      <br />
-      <vue-headline level="3">SEO</vue-headline>
-      <p>
-        We support SEO (document head tags management) and server-side-rendering for search engines that support
-        indexing of JavaScript content. (eg. Google)
-      </p>
-      <br />
-      <vue-headline level="3">Best practices</vue-headline>
-      <p>
-        A Common style guide, TypeScript, and the best test setup: Automatically guarantee code quality and non-breaking
-        changes.
-      </p>
-      <br />
-      <vue-headline level="3">i18n</vue-headline>
-      <p>
-        Scalable apps need to support multiple languages, easily add and support multiple languages with vue-i18n.
-      </p>
-    </home-section-ieo> -->
   </div>
 </template>
 

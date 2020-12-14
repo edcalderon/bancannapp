@@ -12,7 +12,7 @@
         </vue-grid-item>
 
         <vue-grid-item>
-          <!--  Press this&nbsp;&nbsp;&nbsp;&nbsp;<vue-button outlined @click="onClick">button</vue-button>
+          Press this&nbsp;&nbsp;&nbsp;&nbsp;<vue-button outlined @click="onClick">button</vue-button>
           and the following will happen:
 
           <br />
@@ -34,7 +34,7 @@
                 </li>
               </ul>
             </li>
-          </ul> -->
+          </ul>
         </vue-grid-item>
       </vue-grid-row>
     </vue-grid>

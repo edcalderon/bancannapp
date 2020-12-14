@@ -5,7 +5,7 @@
   {{{ meta.inject().meta.text() }}} {{{ meta.inject().title.text() }}} {{{ meta.inject().link.text() }}} {{{ meta.inject().style.text() }}} {{{ meta.inject().script.text() }}} {{{ meta.inject().noscript.text() }}}
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, minimal-ui">
-  <meta name="theme-color" content="#17BEBB"><% for (var chunk of webpack.chunks) {
+  <meta name="theme-color" content="#9f10ca"><% for (var chunk of webpack.chunks) {
   for (var file of chunk.files) {
   if (file.match(/\.(js|css)$/)) { %>
   <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>"><% }}} %>
