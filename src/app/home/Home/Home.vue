@@ -8,7 +8,7 @@
       AOS.init();
     </script>
     <!-- END animations imports -->
-    <home-section flip ref="home-section" :image="{ setImagen }">
+    <home-section flip ref="home-section" :image="{ setImagen }" :class="$style.homeSection">
       <div class="item" data-aos="fade-right">
         <vue-headline appearance-level="2" level="2"> {{ $t('components.home.tittle') }}</vue-headline>
       </div>
@@ -20,6 +20,7 @@
         <vue-headline appearance-level="3" level="3">{{ $t('components.home.headline-2') }} </vue-headline>
         <p>
           {{ $t('components.home.p-2') }}
+          <a href="https://e-groweed.com/" target="_blank" rel="noopener noreferrer"> {{ $t('about.bca.p7') }}</a>
         </p>
         <br />
         <vue-headline appearance-level="3" level="3">{{ $t('components.home.headline-3') }} </vue-headline>
@@ -119,28 +120,13 @@ export default {
 <style lang="scss" module>
 @import '~@/app/shared/design-system';
 
-.home-section {
-  min-height: 100vh;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  text-shadow: 0 0 5px rgba(15, 15, 15, 0.4);
-  padding-top: $space-84;
+.homeSection {
+  a {
+    color: #291e59 !important;
+    font-weight: $footer-link-font-weight;
 
-  image {
-    max-width: 12.8rem;
-    border-radius: 50%;
-  }
-
-  h2 {
-    margin-bottom: $space-32;
-    font-weight: $font-weight-light;
-  }
-
-  @include mediaMin(tabletPortrait) {
-    min-height: 50vh;
-    img {
-      max-width: 25.6rem;
+    &:hover {
+      color: #9cbe34 !important;
     }
   }
 }

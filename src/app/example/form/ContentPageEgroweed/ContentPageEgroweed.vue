@@ -5,6 +5,9 @@
         <vue-image :src="setImagen" :native="true" :class="$style.image"> </vue-image>
       </vue-grid-item>
     </vue-grid-row>
+    <vue-grid-row>
+      <vue-grid-item> </vue-grid-item>
+    </vue-grid-row>
   </div>
 </template>
 
