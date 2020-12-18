@@ -194,7 +194,7 @@ export default {
       this.showLoginModal = false;
     },
     redirectToSale() {
-      window.open('https://e-groweed.com/sale/pages/login', '_blank');
+      window.open('https://e-groweed.com/sale/', '_blank');
     },
   },
   created() {
