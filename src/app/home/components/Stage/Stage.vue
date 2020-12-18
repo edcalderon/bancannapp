@@ -100,7 +100,7 @@ export default {
     }
   }
   @include mediaMin(phone) {
-    max-height: 50vh;
+    max-height: 72vh;
     max-weight: 50vh;
     text-align: center;
     img {
