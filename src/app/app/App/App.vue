@@ -71,6 +71,13 @@
             Twitter
           </a>
         </vue-sidebar-group-item>
+
+        <vue-sidebar-group-item>
+          <a href="https://discord.gg/9rDVgJkT" target="_blank" rel="noopener noreferrer">
+            <vue-icon-discord />
+            Discord
+          </a>
+        </vue-sidebar-group-item>
       </vue-sidebar-group>
     </vue-sidebar>
 
@@ -99,6 +106,7 @@ import VueIconBook from '@components/icons/VueIconBook/VueIconBook.vue';
 import VueIconHashtag from '@components/icons/VueIconHashtag/VueIconHashtag.vue';
 import VueIconGithub from '@components/icons/VueIconGithub/VueIconGithub.vue';
 import VueIconTwitterSquare from '@components/icons/VueIconTwitterSquare/VueIconTwitterSquare.vue';
+import VueIconDiscord from '@components/icons/VueIconDiscord/VueIconDiscord.vue';
 import VueSelect from '@components/VueSelect/VueSelect.vue';
 import VueIconPuzzlePiece from '@components/icons/VueIconPuzzlePiece/VueIconPuzzlePiece.vue';
 import VueButton from '@components/VueButton/VueButton.vue';
@@ -116,6 +124,7 @@ export default {
     VueIconPuzzlePiece,
     VueSelect,
     VueIconTwitterSquare,
+    VueIconDiscord,
     VueIconGithub,
     VueIconHashtag,
     VueIconBook,

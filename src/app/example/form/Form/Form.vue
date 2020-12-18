@@ -1,10 +1,9 @@
 <template>
   <div :class="$style.form">
     <vue-grid>
-      <vue-breadcrumb :items="[{ label: 'Home', href: '/' }, { label: 'About BCA' }]" />
+      <vue-breadcrumb :items="[{ label: 'Home', href: '/' }, { label: $t('about.bca') }]" />
       <vue-grid-row>
         <vue-grid-item>
-          <vue-headline level="1">About BCA</vue-headline>
           <form-example />
         </vue-grid-item>
       </vue-grid-row>
@@ -38,5 +37,9 @@ export default {
 
 .form {
   padding-top: $nav-bar-height;
+}
+
+.img {
+  padding-bottom: $nav-bar-height;
 }
 </style>

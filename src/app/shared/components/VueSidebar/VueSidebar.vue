@@ -72,6 +72,10 @@ export default {
   transform: translateX(-100%);
   overflow: hidden;
 
+  @media screen and (max-width: 995px), screen and (max-height: 700px) {
+    overflow: scroll;
+  }
+
   transition: transform $brand-transition-duration ease-in-out;
   width: $sidebar-width;
   -webkit-overflow-scrolling: touch;
