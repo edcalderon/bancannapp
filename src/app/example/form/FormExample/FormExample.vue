@@ -1,8 +1,5 @@
 <template>
   <div :class="$style.formExample">
-    <br />
-    <br />
-    <br />
     <vue-grid-row>
       <vue-grid-item class="vueGridItem">
         <vue-image :src="setImagen" :native="true" :class="$style.image"> </vue-image>
@@ -87,7 +84,6 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 5%;
-  margin-bottom: $space-32;
   border-radius: 10%;
   border: none !important;
   /*  box-shadow: $button-active-shadow; */

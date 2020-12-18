@@ -8,18 +8,12 @@
           <vue-headline appearance-level="1" level="2">BANCANNABIS.ORG</vue-headline>
           <div :class="$style.subTittle">
             {{ $t('App.core.description') }}
-            <div class='console-container'><span id='text'></span><div class='console-underscore hidden' id='console'></div></div>
+            <div class="console-container">
+              <span id="text"></span>
+              <div class="console-underscore hidden" id="console"></div>
+            </div>
           </div>
           <br />
-<!--           <a
-            :class="$style.github"
-            rel="noopener noreferrer"
-            href="https://github.com/bancannabis"
-            target="_blank"
-            aria-label="vuesion github repository"
-          >
-            <vue-icon-github />
-          </a> -->
         </vue-grid-item>
       </vue-grid-row>
     </vue-grid>
@@ -86,7 +80,7 @@ export default {
 @import '~@/app/shared/design-system';
 
 .stage {
-  min-height: 100vh;
+  min-height: 50vh;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -124,25 +118,25 @@ export default {
   font-weight: 400;
 
   .console-container {
-    font-family:Khula;
-    font-size:4em;
-    text-align:center;
-    height:200px;
-    width:600px;
-    display:block;
-    position:absolute;
-    color:white;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    margin:auto;
+    font-family: Khula;
+    font-size: 4em;
+    text-align: center;
+    height: 200px;
+    width: 600px;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
   .console-underscore {
-    display:inline-block;
-    position:absolute;
-    top:-0.14em;
-    left:10px;
+    display: inline-block;
+    position: absolute;
+    top: -0.14em;
+    left: 10px;
   }
 }
 

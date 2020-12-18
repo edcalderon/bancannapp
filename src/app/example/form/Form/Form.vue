@@ -36,10 +36,6 @@ export default {
 @import '~@/app/shared/design-system';
 
 .form {
-  padding-top: $nav-bar-height;
-}
-
-.img {
-  padding-bottom: $nav-bar-height;
+  padding-top: 5vh;
 }
 </style>
