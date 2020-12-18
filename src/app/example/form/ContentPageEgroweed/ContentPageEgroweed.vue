@@ -5,39 +5,6 @@
         <vue-image :src="setImagen" :native="true" :class="$style.image"> </vue-image>
       </vue-grid-item>
     </vue-grid-row>
-
-    <vue-grid-row>
-      <vue-grid-item>
-        <p>{{ $t('about.bca.p1') }}</p>
-        <p>{{ $t('about.bca.p2') }}</p>
-        <br />
-      </vue-grid-item>
-    </vue-grid-row>
-
-    <vue-grid-row>
-      <vue-grid-item>
-        <br />
-        <vue-headline appearance-level="3" level="3">{{ $t('about.bca.h1') }}</vue-headline>
-        <br />
-        <p>{{ $t('about.bca.p3') }}</p>
-        <p>{{ $t('about.bca.p4') }}</p>
-        <br />
-      </vue-grid-item>
-    </vue-grid-row>
-
-    <vue-grid-row>
-      <vue-grid-item>
-        <br />
-        <vue-headline appearance-level="3" level="3"> {{ $t('about.bca.h2') }}</vue-headline>
-        <br />
-        <p>{{ $t('about.bca.p5') }}</p>
-        <p>
-          {{ $t('about.bca.p6') }}
-          <a href="https://e-groweed.com/" target="_blank" rel="noopener noreferrer"> {{ $t('about.bca.p7') }}</a>
-        </p>
-        <br />
-      </vue-grid-item>
-    </vue-grid-row>
   </div>
 </template>
 
@@ -64,9 +31,9 @@ export default {
     ...mapState({
       setImagen: (state: IState) => {
         if (state.app.locale == 'es') {
-          return 'bca_token_esp.png';
+          return 'egroweed_esp.png';
         } else {
-          return 'bca_token_eng.png';
+          return 'egroweed_eng.png';
         }
       },
     }),

@@ -40,6 +40,10 @@
           <vue-icon-code />
           {{ $t('about.bca') }}
         </vue-sidebar-group-item>
+        <vue-sidebar-group-item to="/aboutEgroweed">
+          <vue-icon-code />
+          {{ $t('about.egroweed') }}
+        </vue-sidebar-group-item>
       </vue-sidebar-group>
 
       <vue-sidebar-group title="Docs">

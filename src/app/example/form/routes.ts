@@ -6,4 +6,10 @@ export const FormRoutes: RouteConfig[] = [
     name: 'aboutBCA',
     component: () => import(/* webpackChunkName: "form" */ './Form/Form.vue').then((m: any) => m.default),
   },
+  {
+    path: '/aboutEgroweed',
+    name: 'aboutEgroweed',
+    component: () =>
+      import(/* webpackChunkName: "form" */ './PageEgroweed/PageEgroweed.vue').then((m: any) => m.default),
+  },
 ];
