@@ -92,7 +92,7 @@ export default {
   }
 
   @include mediaMin(tabletPortrait) {
-    max-height: 50vh;
+    max-height: 55vh;
     img {
       max-width: 5.6rem;
       max-height: 15rem;
@@ -100,12 +100,12 @@ export default {
     }
   }
   @include mediaMin(phone) {
-    max-height: 72vh;
+    min-height: 55vh;
     max-weight: 50vh;
     text-align: center;
     img {
       max-width: 15rem;
-      max-height: 15rem;
+      max-height: 10rem;
     }
     h2 {
       margin-bottom: $space-32;

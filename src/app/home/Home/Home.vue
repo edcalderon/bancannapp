@@ -107,9 +107,9 @@ export default {
       },
       setImagen: (state: IState) => {
         if (state.app.locale == 'es') {
-          return '/re-esp.png';
+          return '/welcome_eng.png';
         } else {
-          return '/re-eng.png';
+          return '/welcome_eng.png';
         }
       },
     }),

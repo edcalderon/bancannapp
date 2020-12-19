@@ -66,19 +66,16 @@ export default {
 }
 
 .image {
-  background-size: cover;
   background-repeat: no-repeat;
-  background-position: 5%;
-  margin-bottom: $space-32;
   border-radius: 10%;
   border: none !important;
+  max-height: 65vh;
   /*  box-shadow: $button-active-shadow; */
   @include mediaMin(tabletPortrait) {
     width: 100%;
     height: 100%;
     object-fit: contain;
     margin-bottom: 0;
-    zoom: -20%;
   }
   @include mediaMin(phone) {
     width: 100%;
