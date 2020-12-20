@@ -50,6 +50,11 @@ export default {
 .homeSection {
   padding: $space-48 0;
 
+  p{
+  text-align: justify;
+  text-justify: inter-word;
+  }
+
   @include mediaMin(tabletPortrait) {
     padding: $space-84 0;
   }

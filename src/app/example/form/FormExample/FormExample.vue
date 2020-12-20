@@ -8,8 +8,10 @@
 
     <vue-grid-row>
       <vue-grid-item>
-        <p>{{ $t('about.bca.p1') }}</p>
-        <p>{{ $t('about.bca.p2') }}</p>
+        <p>
+          {{ $t('about.bca.p1') }}
+          {{ $t('about.bca.p2') }}
+        </p>
         <br />
       </vue-grid-item>
     </vue-grid-row>
@@ -19,8 +21,10 @@
         <br />
         <vue-headline appearance-level="3" level="3">{{ $t('about.bca.h1') }}</vue-headline>
         <br />
-        <p>{{ $t('about.bca.p3') }}</p>
-        <p>{{ $t('about.bca.p4') }}</p>
+        <p>
+          {{ $t('about.bca.p3') }}
+          {{ $t('about.bca.p4') }}
+        </p>
         <br />
       </vue-grid-item>
     </vue-grid-row>
@@ -104,5 +108,11 @@ export default {
 
 .formExample {
   display: block;
+
+  p{
+  text-align: justify;
+  text-justify: inter-word;
+  }
+
 }
 </style>
