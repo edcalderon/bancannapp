@@ -24,7 +24,7 @@
   },
   "spa": {
     "appShellRoute": "/",
-    "additionalRoutes": ["/form"]
+    "additionalRoutes": ["/aboutBCA", "/aboutEgroweed"]
   },
   "devServer": {
     "watchOptions": {

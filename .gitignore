@@ -11,3 +11,5 @@ storybook-static
 logs
 .cache
 .vscode/
+server.crt
+server.key
